@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main_page.css" type="text/css">
+</head>
+
+<html lang="eng">  
+    
+    <div id="Info">
+        <!--General Information-->
+        <p>Name</p>
+        <div><input type="text" id="name" class="inputs"></div>
+        <p>Address</p>
+        <div><input type="text" id="address" class="inputs"></div>
+        <p>City</p>
+        <div><input type="text" id="city" class="inputs"></div>
+        <p>State</p>
+        <div><input type="text" id="state" class="inputs"></div>
+        <p>Zip</p>
+        <div><input type="text" id="zip" class="inputs"></div>
+        <p>Policy number</p>
+        <div><input type="text" id="policy number" class="inputs"></div>
+        <p>Loss category</p>
+        <div>
+            <select name="lossCat" id="lossCat" class="inputs">
+                <option value=""></option>
+                <option id="Auto" value="Auto">Auto</option>
+                <option id="Home" value="Home">Home</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <!--Home specific info-->
+        <div id="Home" class="addInfo">
+            <div>
+                <p>Provide details of any items stolen, damaged, or lost:</p>
+                <textarea name="itemsDesc" class="textbox" id="itemsDesc" cols="30" rows="10"></textarea>
+            </div>
+            <p>Cause of damages</p>
+            <div>
+                <input type="checkbox" id="itemstatus"> Fire 
+                <input type="checkbox" id="itemstatus"> Wind 
+                <input type="checkbox" id="itemstatus"> Water 
+                <input type="checkbox" id="itemstatus"> Theft
+            </div>
+            <p>Police report number (if available):</p>
+            <input type="text" id="police#" class="inputs">
+            <p>Provide a short description of the damages</p>
+            <div><textarea name="lossDesc" class="textbox" id="lossDesc" cols="30" rows="10"></textarea></div>
+            <p>Upload photos of damages</p>
+            <div><input type="file" id="homeFile"></div>
+        </div>
+        <!--Auto specific info-->
+        <div id="Auto" class="addInfo">
+            <div>Driver's License #:</div>
+            <input type="text" id="driverLicense" class="inputs">
+            <p id="ticketInfo">Ticket number (if applicable):</p>
+            <input type="text" id="TicketNumber" class="inputs">
+            <p><u>Vehicle Information</u></p>
+            <div id="carInfo">
+                <p>Year:</p>
+                <input type="text" id="carYear" class="inputs">
+                <p>Make:</p>
+                <input type="text" id="carMake" class="inputs">
+                <p>Model:</p>
+                <input type="text" id="carModel" class="inputs">
+                <p>Color:</p>
+                <input type="text" id="carColor" class="inputs">
+                <p>License Plate:</p>
+                <input type="text" id="carPlate" class="inputs">
+            </div>
+            <p>Provide a short description of the damages</p>
+            <div><textarea name="lossDesc" class="textbox" id="lossDesc" cols="30" rows="10"></textarea></div>
+            <p>Upload photos of damages</p>
+            <div><input type="file" id="autoFile"></div>
+        </div>
+        <input type="submit">
+    </div>
+
+    <!--<script>
+        var category = document.getElementById("lossCat");
+        if (category == "Auto") {
+            document.querySelector("#Auto").style.display = 'block';
+        }
+        else if (category == "Home") {
+            document.querySelector("#Home").style.display = 'block';
+        }
+    </script>-->
+
+</html> 

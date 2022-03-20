@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login_page.css" type="text/css" />
+  </head>
+  <body onload="get()" class="form" box>
+    <div id="overlay"></div>
+    <div id="loginContainer">
+      <div id="title">
+        <div id="logoName">
+          <img
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftruenorthcompanies.com%2Fwebres%2FImage%2Fblog%2FNationwideLogo.jpg&f=1&nofb=1"
+            alt="Nationwide logo"
+            width="140"
+            id="Logo"
+          />
+          <p id="solutionName"><strong>SmartContact</strong></p>
+        </div>
+        <h1 id="LogoText"><p>Login</p></h1>
+      </div>
+      <p id="savedText"></p>
+      <p id="openedText"></p>
+      <div id="email">
+        <input type="text" class="input" id="emailInput" placeholder="Ex. myemail@gmail.com" />
+        <p class="inputSubnote" id="emailSubnote">Note: Please use a valid email.</p>
+      </div>
+      <div>
+        <input type="text" class="input" id="passwordInput" placeholder="***********" />
+        <p class="inputSubnote" id="passwordSubnote">Note: Password box accepts any parameters</p>
+      </div>
+      <div id="buttons">
+        <button id="login" onclick="save()">Login</button>
+        <!--<a href="#" id="link">Github link</a>-->
+      </div>
+    </div>
+  </body>
+
+  <script>
+    var storedItem = localStorage.getItem("storedItem");
+    var loginButton = document.getElementById("login");
+    function save() {
+      var Item = document.getElementById("email").value;
+      localStorage.setItem("storedItem", Item);
+      document.getElementById("savedText").innerHTML = Item + " SAVED";
+    }
+    function get() {
+      localStorage.getItem("storedItem");
+      document.getElementById("opendText").innerHTML = storedItem + " OPENED";
+    }
+    loginButton.addEventListener('click', function() {
+      document.location.href = "http://127.0.0.1:5500/html/second_page.html";
+    }, false);
+    /*loginButton.addEventListener('click', function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+    }, false);*/
+
+
+  </script>
+  <!--
+<form action="mailto: get()"
+method="POST"
+enctype="multipart/form-data"
+name="EmailForm">
+    Name:<br>
+    <input type="text" size="19" name="Contact-Name"><br><br>
+    Email:<br>
+    <input type="email" name="Contact-Email"><br><br> 
+    Message:<br> 
+    <textarea name="Contact-Message" rows="6″ cols="20″>
+    </textarea><br><br> 
+    <button type="submit" value="Submit">Send</button>
+</form>
+--></html>
